@@ -54,8 +54,8 @@
                         @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre style="font-size:20px; color:black">
-                                    {{ Auth::user()->name }}
-                                    (ポイント{{ Auth::user()->point }})
+                                    {{ Auth::user()->name }}さん
+                                    ({{ Auth::user()->point }}pt)
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
@@ -80,7 +80,7 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <main class="py-4" style="background-color:aliceblue">
             @yield('content')
         </main>
     </div>
