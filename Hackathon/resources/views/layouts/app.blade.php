@@ -15,9 +15,47 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <!-- Styles -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr@latest/dist/plugins/monthSelect/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr@latest/dist/plugins/monthSelect/index.js"></script>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <style type="text/css">
+        .my-label{
+            font-size:larger;
+        }
+        .date-label {
+            position: relative;
+            display: inline-block;
+            width: 200px;
+            height: 36px;
+            border: 2px solid #ccc;
+            border-radius: 15px;
+        }
+        input[type="date"] {
+            position: relative;
+            padding: 0 10px;
+            width: 200px;
+            height: 36px;
+            border: 0;
+            background: transparent;
+            box-sizing: border-box;
+            font-size: 14px;
+            color: #999;
+        }
+        input[type="date"]::-webkit-inner-spin-button{
+            -webkit-appearance: none;
+            }
+        input[type="date"]::-webkit-clear-button{
+            -webkit-appearance: none;
+        }
+        .time-check{
+            margin-right:1.5rem;
+        }
+    </style>
 </head>
 <body>
     <div id="app">

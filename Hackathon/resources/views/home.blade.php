@@ -26,7 +26,7 @@
                             </div>
                         </li>
                         <a href="#"><li class="list-group-item">頻出質問リスト</li></a>
-                        <a href="#"><li class="list-group-item">面接練習を受ける</li></a>
+                        <a href="/guestReservation"><li class="list-group-item">面接練習を受ける</li></a>
                         <a href="/hostReservation"><li class="list-group-item">面接官をやる</li></a>
                         
                     </ul>

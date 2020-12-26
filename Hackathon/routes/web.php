@@ -14,12 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Auth::routes();
 
@@ -37,3 +33,6 @@ Route::post('/profile', 'App\Http\Controllers\ProfileController@create');
 Route::get('/hostReservation', function () {
     return view('hostReservation');
 })->name('host');
+Route::get('/guestReservation', function () {
+    return view('guestReservation');
+})->name('guest');
