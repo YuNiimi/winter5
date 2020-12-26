@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
+use App\Models\Profile;
 
 class ProfileController extends Controller
 {
@@ -23,6 +26,17 @@ class ProfileController extends Controller
      */
     public function index()
     {
+        $user_id = Auth::id();
+        $profile = Profile::where('user_id',$user_id)->first();
+        // $profile = Profile::all();
+        dd($profile);
+        return view('profile');
+    }
+
+    public function create(Request $request)
+    {
+        //DBに登録する
+        dd($request->all());
         return view('profile');
     }
 }

@@ -30,3 +30,5 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 // })->name('profile');
 
 Route::get('/profile', [App\Http\Controllers\ProfileController::class, 'index'])->name('profile');
+Route::post('/profile', [App\Http\Controllers\ProfileController::class, 'create']);
+Route::post('/profile', 'App\Http\Controllers\ProfileController@create');
