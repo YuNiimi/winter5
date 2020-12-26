@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Reservation;
+use Date;
 
 class ReservationController extends Controller
 {
@@ -62,7 +63,14 @@ class ReservationController extends Controller
         // zoomミーティングを発行する
         $zoomController = app()->make('App\Http\Controllers\ZoomController');
         $meeting = $zoomController->createMeeting($record_clone->date,$record_clone->time);
-        dd($meeting);
+        $start_time = date($meeting['start_time']);
+        // return view('hostReserved',['meeting' => $meeting]);
+        return view('hostReserved',
+                        [
+                            'start_url' => $meeting['start_url'],
+                            'start_time' => $start_time,
+                        
+                        ]);
 
     }
 

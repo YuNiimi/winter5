@@ -28,7 +28,7 @@ class ZoomController extends Controller
       //                         ->sign($signer, 'testing')
       //                         ->getToken();
       // return $jwt_token;
-      return "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOm51bGwsImlzcyI6IjRYTWtPWHZJUzFlNDNGOVZRNDFtOEEiLCJleHAiOjE2MDg5OTI5MDYsImlhdCI6MTYwODk4NzUwN30.t4TrN156pMlUOMgLo5Mk8atJd9JUPnhifcyZIansC_Q";
+      return "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOm51bGwsImlzcyI6IjRYTWtPWHZJUzFlNDNGOVZRNDFtOEEiLCJleHAiOjE2MDk1OTg1NTksImlhdCI6MTYwODk5Mzc1OX0.ZGnBn4TBcdIxBSkFyqO85TcDtQiP153GlyXIAC2rr4I";
   }
 
   public function getUserId() 
@@ -45,8 +45,7 @@ class ZoomController extends Controller
 
   public function createMeeting(String $date,Int $time) 
   {
-    // echo $date;echo $time;
-    echo $date.'T'.$time.':00:00Z'; 
+    // echo $date.'T'.$time.':00:00Z'; 
       $user_id = $this -> getUserId();
       $params = [
         'topic' => '模擬面接',
