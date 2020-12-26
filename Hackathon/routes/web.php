@@ -40,4 +40,5 @@ Route::get('/guestReservation', function () {
 })->name('guest');
 
 Route::post('/guestReserved','App\Http\Controllers\ReservationController@createGuest');
+Route::post('/hostReserved','App\Http\Controllers\ReservationController@createHost');
 

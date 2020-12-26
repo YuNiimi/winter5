@@ -50,4 +50,20 @@ class ReservationController extends Controller
         }
         return view('guestReserved',$request->all());
     }
+
+    public function createHost(Request $request){
+        //keyはReservationテーブルのid
+        // dd($request->all());
+        $record = Reservation::find($request->key);
+        //saveで消えるため保持
+        $record_clone = $record;
+        $record-> host_id = Auth::id();
+        $record->save();
+        // zoomミーティングを発行する
+        $zoomController = app()->make('App\Http\Controllers\ZoomController');
+        $meeting = $zoomController->createMeeting($record_clone->date,$record_clone->time);
+        dd($meeting);
+
+    }
+
 }
