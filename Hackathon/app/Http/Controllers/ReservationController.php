@@ -31,6 +31,10 @@ class ReservationController extends Controller
 
     public function indexHost(){
 
+        $records = Reservation::all();
+        // dd($records);
+        return view('hostReservation',['records' => $records]);
+
     }
 
     public function createGuest(Request $request)

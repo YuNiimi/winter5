@@ -29,11 +29,11 @@ Route::get('/profile', [App\Http\Controllers\ProfileController::class, 'index'])
 // Route::post('/profile', [App\Http\Controllers\ProfileController::class, 'create']);
 Route::post('/profile', 'App\Http\Controllers\ProfileController@create');
 
-Route::get('/hostReservation', function () {
-    return view('hostReservation');
-})->name('host');
+// Route::get('/hostReservation', function () {
+//     return view('hostReservation');
+// })->name('host');
+Route::get('/hostReservation', 'App\Http\Controllers\ReservationController@indexHost');
 
-Route::get('/hostReservation','App\Http\Controllers\ReservationController@index');
 
 Route::get('/guestReservation', function () {
     return view('guestReservation');
