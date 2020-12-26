@@ -26,11 +26,12 @@ class ProfileController extends Controller
      */
     public function index()
     {
+        //登録済みプロフィールの取得
         $user_id = Auth::id();
         $profile = Profile::where('user_id',$user_id)->first();
         // $profile = Profile::all();
-        dd($profile);
-        return view('profile');
+        // dd($profile);
+        return view('profile',['profile' => $profile]);
     }
 
     public function create(Request $request)
