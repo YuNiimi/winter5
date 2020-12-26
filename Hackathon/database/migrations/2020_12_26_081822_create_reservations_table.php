@@ -17,7 +17,8 @@ class CreateReservationsTable extends Migration
             $table->increments('id');
             $table->integer('guest_id');
             $table->integer('host_id')->nullable();
-            $table->datetime('time');
+            $table->date('date');
+            $table->integer('time');
             $table->integer('completed')->default(0);
             $table->integer('deleted')->default(0);
             $table->timestamps();

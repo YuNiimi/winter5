@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
-use App\Models\Profile;
+use App\Models\Reservation;
 
 class ReservationController extends Controller
 {
@@ -33,10 +33,17 @@ class ReservationController extends Controller
 
     }
 
-    public function create(Request $request)
+    public function createGuest(Request $request)
     {
-        //DBに登録する
-        dd($request->all());
-        return view('profile');
+        //reservationsテーブルに挿入（カラム数＝選択時間数）
+        // dd($request->all());
+        for($i=0;$i<count($request->time);$i++){
+            $record = new Reservation;
+            $record->guest_id = Auth::id();
+            $record->date = $request->date;
+            $record->time = $request->time[$i];
+            $record->save();
+        }
+        return view('guestReserved',$request->all());
     }
 }

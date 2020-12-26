@@ -4,11 +4,11 @@
 
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
                     <h2>
-                       希望日時を登録する。
+                       希望日時を登録しましょう！
                     </h2>
                 </div>
 
@@ -25,10 +25,10 @@
                             参加したい日時を選びましょう！</h1>
                         </div>
                             <div class="text-right">※面接は一回当たり３０分以内で終了します</div>
-                        <div>
-                            <span class="my-label mr-4">日付の選択</span>
+                        <div class="mt-4">
+                            <span class="my-labelmr-4">日付の選択</span>
                             <div class="date-label">
-                                <input type="date" />
+                                <input type="date" name="date" required />
                             </div>
                         </div>
                         <div class="mt-4">
@@ -36,19 +36,19 @@
                             <div class="container mt-2">
                                 <div class="row my-label">
                                     <div class="col-sm">
-                                        <input class="time-check" type="checkbox" name="time" value="9">9:00～
-                                        <br><input class="time-check" type="checkbox" name="time" value="10">10:00～
-                                        <br><input class="time-check" type="checkbox" name="time" value="11">11:00～
+                                        <input class="time-check" type="checkbox" name="time[]" value="9">9:00～
+                                        <br><input class="time-check" type="checkbox" name="time[]" value="10">10:00～
+                                        <br><input class="time-check" type="checkbox" name="time[]" value="11">11:00～
                                     </div>
                                     <div class="col-sm">
-                                        <input class="time-check" type="checkbox" name="time" value="14">14:00～
-                                        <br><input class="time-check" type="checkbox" name="time" value="15">15:00～
-                                        <br><input class="time-check" type="checkbox" name="time" value="16">16:00～
+                                        <input class="time-check" type="checkbox" name="time[]" value="14">14:00～
+                                        <br><input class="time-check" type="checkbox" name="time[]" value="15">15:00～
+                                        <br><input class="time-check" type="checkbox" name="time[]" value="16">16:00～
                                     </div>
                                     <div class="col-sm">
-                                        <input class="time-check" type="checkbox" name="time" value="18">18:00～
-                                        <br><input class="time-check" type="checkbox" name="time" value="19">19:00～
-                                        <br><input class="time-check" type="checkbox" name="time" value="20">20:00～
+                                        <input class="time-check" type="checkbox" name="time[]" value="18">18:00～
+                                        <br><input class="time-check" type="checkbox" name="time[]" value="19">19:00～
+                                        <br><input class="time-check" type="checkbox" name="time[]" value="20">20:00～
                                     </div>
                                 </div>
                             </div>
