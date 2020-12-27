@@ -9,4 +9,12 @@ class Profile extends Model
 {
     use HasFactory;
     protected $table = 'profiles';
+
+    protected $primaryKey = "user_id";
+
+    public function reservations()
+    {
+        return $this -> hasMany('App\ModelReservation');
+    }
+    
 }

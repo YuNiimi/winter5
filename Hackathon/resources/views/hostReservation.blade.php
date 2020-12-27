@@ -49,8 +49,8 @@
                                     <tr>
                                         <td>{{$record->date}}</td>
                                         <td>{{$record->time}} 時～</td>
-                                        <td>{{$record->time}}</td>
-                                        <td>{{$record->time}}</td>
+                                        <td>{{$record->graduation}}</td>
+                                        <td>{{$record->industry}}</td>
                                         <td><input type="submit" class="btn btn-primary" style="width:5rem;" onclick="form.key.value='{{$record -> id}}'" value="決定"></td>
                                         <!-- <td><input type="submit" class="btn btn-primary" style="width:5rem;" onclick="form.key.value=''" value="{{$record -> id}}"></td> -->
                                     </tr>
@@ -60,7 +60,6 @@
                         </div>
                         <div class="text-right mt-4 mb-4 mr-4">
                             <button type="button" class="btn btn-secondary" onclick="location.href='/home'">キャンセル</button>
-                            <input type="submit" class="btn btn-primary" value="変更を保存する"></input>
                         </div>
                         <!-- keyにrecordのidを格納して送ります -->
                         <input name="key" type="hidden" value="" />
