@@ -12,9 +12,11 @@ class Profile extends Model
 
     protected $primaryKey = "user_id";
 
-    public function reservations()
-    {
-        return $this -> hasMany('App\ModelReservation');
-    }
+    // protected $hidden = ['id'];
+
+    // public function reservations()
+    // {
+    //     return $this -> hasMany('App\ModelReservation');
+    // }
     
 }

@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\TestMail;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,3 +44,8 @@ Route::get('/guestReservation', function () {
 Route::post('/guestReserved','App\Http\Controllers\ReservationController@createGuest');
 Route::post('/hostReserved','App\Http\Controllers\ReservationController@createHost');
 
+
+// Route::get('/testmail', function(){
+//     Mail::to('test@example.com')->send(new TestMail);
+//     return 'メール送信完了';
+// });
