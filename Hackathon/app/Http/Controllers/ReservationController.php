@@ -37,7 +37,7 @@ class ReservationController extends Controller
     public function indexHost(){
 
         // $records = Reservation::all()->with('profile');
-        $records = DB::select("SELECT *, reservations.id as id FROM reservations INNER JOIN profiles ON reservations.guest_id = profiles.user_id WHERE reservations.host_id IS NULL");
+        $records = DB::select("SELECT *, reservations.id as id FROM reservations LEFT JOIN profiles ON reservations.guest_id = profiles.user_id WHERE reservations.host_id IS NULL");
         // dd($records);
         return view('hostReservation',['records' => $records]);
 
